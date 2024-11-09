@@ -1,4 +1,2 @@
-__pycache__
-chat_history.db
-chat_history1.db
-chat_history2.db
+__pycache__/
+*.db
