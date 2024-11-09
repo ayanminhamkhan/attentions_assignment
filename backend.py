@@ -60,14 +60,18 @@ def generate_question(history):
 def get_chat_history():
     cursor.execute("SELECT role, content FROM chat")
     return cursor.fetchall()
+
+
+
+
 def generate_chat(history):
     chat = ollama.chat(
         model='llama3.2',
         messages=history
 
     )
-    print("--------------------------------------------")
-    print(chat['message']['content'])
+    # print("--------------------------------------------")
+    # print(chat['message']['content'])
     return chat['message']['content']
 # Task-specific prompt functions
 def classify_chat(chat_history):
